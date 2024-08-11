@@ -38,7 +38,11 @@ const PlatformIconList = ({ platforms }: Props) => {
       {" "}
       // theme.space value
       {platforms.map((platform) => (
-        <Icon as={iconMap[platform.slug]} color={"gray.600"} />
+        <Icon
+          key={platform.id}
+          as={iconMap[platform.slug]}
+          color={"gray.600"}
+        />
       ))}
     </HStack>
   );
