@@ -8,6 +8,7 @@ import PlatformSelector from "./components/PlatformSelector";
 import { Platform } from "./hooks/useGames";
 import SortSelector from "./components/SortSelector";
 import GameHeading from "./components/GameHeading";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 export interface GameQuery {
   genre: Genre | null;
@@ -30,6 +31,7 @@ function App() {
         lg: "200px 1fr",
       }}
     >
+      <SpeedInsights />
       <GridItem area="nav">
         <NavBar
           onSearch={(searchText) => setGameQuery({ ...gameQuery, searchText })}
